@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="style/jquery.fallingsnow.css">
+        <style>
+            body {
+                background: azure;
+            }
+            #snow {
+                position: relative;
+                background: black;
+                border: 5px solid gray;
+                border-radius: 10px;
+                height: 50rem;
+                overflow: hidden;
+            }
+            #esimene, #teine, #viimane {
+                display: none;
+            }
+        </style>
+    </html>
+    <body>
+        <div id="snow" class="text-center text-info">
+            <h1 id="esimene">sa vaatad ringi ja leiad, et oled õues.</h1>
+            <h1 id="teine">Taevast, kui süsimustast august, sajab lund.</h1>
+            <h1 id="viimane">To be continued</h1>
+        </div>
+        <script src="skript/jquery.fallingsnow.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#snow" ).fallingSnow();
+
+                setTimeout(function(){$("#esimene").fadeIn(5000);}, 2000);
+                
+                setTimeout(function(){$("#teine").fadeIn(5000);}, 6000);
+                
+                setTimeout(function(){$("#viimane").fadeIn(5000);}, 10000);
+            });
+        </script>
+    </body>
+</html>
